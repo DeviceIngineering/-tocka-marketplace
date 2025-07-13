@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Создать заказ в МойСклад</title>
+</head>
+<body>
+  <h1>Загрузите Excel-файл для создания заказа</h1>
+  {% for msg in get_flashed_messages() %}
+    <p>{{ msg }}</p>
+  {% endfor %}
+  <form method="post" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <button type="submit">Создать заказ</button>
+  </form>
+</body>
+</html>
